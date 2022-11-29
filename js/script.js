@@ -13,14 +13,16 @@ gen_price.addEventListener('click', function(){
     let price;
 
     if(age == 'minorenne'){
-        price = 0.21 * kms * 0.80;
+        price = (0.21 * kms * 0.80).toFixed(2);
     }
     else if(age == 'over'){
-        price = 0.21 * kms * 0.60;
+        price = (0.21 * kms * 0.60).toFixed(2);
     }
     else{
-        price = 0.21 * kms;
+        price = (0.21 * kms).toFixed(2);
     }
 
-    console.log(price);
+    document.getElementById('name-on-ticket').innerHTML = name_surname
+    document.getElementById('age-on-ticket').innerHTML = age
+    document.getElementById('price-on-ticket').innerHTML = price
 })
